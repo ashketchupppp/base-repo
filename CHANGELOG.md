@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.7 (2022-10-22)
+
+* try fetching the tags first? | [3f590f5](https://github.com/ashketchupppp/base-repo/commit/3f590f508dcbce497ed646ed42980afe8ca0671c)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.6...0.1.7)
+
 ## 0.1.6 (2022-10-22)
 
 * tf man | [84f2ae0](https://github.com/ashketchupppp/base-repo/commit/84f2ae0c1c3d7b68c0ddc2ff500effa5c7a12d29)
