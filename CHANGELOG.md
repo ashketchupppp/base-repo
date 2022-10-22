@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.4 (2022-10-22)
+
+* need permissions to get git tag | [634692f](https://github.com/ashketchupppp/base-repo/commit/634692fbd2926ca6381f662951db32ec5cb672a7)
+* need write permissions | [870ee4d](https://github.com/ashketchupppp/base-repo/commit/870ee4da1a3a2ce1d92097e77868c94e26124615)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.3...0.1.4)
+
 ## 0.1.3 (2022-10-22)
 
 * try different method for tagging | [35b3154](https://github.com/ashketchupppp/base-repo/commit/35b3154d842d2e6a54f3b5bea6ad05d8d407ffff)
