@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 (2022-10-22)
+
+* do docker build and tag with git tag | [9d204f4](https://github.com/ashketchupppp/base-repo/commit/9d204f4fa60ea7065e947d2805c35ea03d6454ea)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.0...0.1.1)
+
 ## 0.1.0 (2022-10-22)
 
 * workfllow | [5851c52](https://github.com/ashketchupppp/base-repo/commit/5851c526c236c4f38d8760104cad32505e2fcd92)
