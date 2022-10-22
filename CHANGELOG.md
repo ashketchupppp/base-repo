@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3 (2022-10-22)
+
+* try different method for tagging | [35b3154](https://github.com/ashketchupppp/base-repo/commit/35b3154d842d2e6a54f3b5bea6ad05d8d407ffff)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.2...0.1.3)
+
 ## 0.1.2 (2022-10-22)
 
 * dont go into dashboard work dir | [5b6e075](https://github.com/ashketchupppp/base-repo/commit/5b6e075db613ff5f913e7ea4fef3064826a3092b)
