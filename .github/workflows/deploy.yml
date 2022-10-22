@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
 
-permissions: write-all
+permissions: read-all
 
 jobs:
   build_and_test:
@@ -18,5 +18,5 @@ jobs:
     - uses: undergroundwires/bump-everywhere@master
     - name: Docker build
       run: |
-        set TAG=$(git describe --tags)
+        set TAG=$(git describe --tags --abbrev=0)
         docker build . --tag baserepo:$TAG
