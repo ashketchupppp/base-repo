@@ -4,9 +4,6 @@ on:
   push:
     branches: [ "main" ]
 
-permissions:
-  actions: read|write
-
 jobs:
   build_and_test:
     defaults:
@@ -18,6 +15,3 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: undergroundwires/bump-everywhere@master
-    - name: Build the Docker image
-      run: |
-        docker build .
