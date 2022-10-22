@@ -4,6 +4,9 @@ on:
   push:
     branches: [ "main" ]
 
+permissions:
+  contents: read
+
 jobs:
   build_and_test:
     defaults:
@@ -17,4 +20,4 @@ jobs:
     - name: Docker build
       run: |
         set TAG=$(git describe --tags)
-        docker build . --tag base-repo:$TAG
+        docker build . --tag baserepo:$TAG
