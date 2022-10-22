@@ -15,3 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: undergroundwires/bump-everywhere@master
+    - name: Docker build
+      run: |
+        docker build . --tag base-repo:$(git describe --tags)
