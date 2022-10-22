@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.5 (2022-10-22)
+
+* just gimme all the permissions | [0b3896d](https://github.com/ashketchupppp/base-repo/commit/0b3896d6e1001e3223cfa9cd88f7a663bd23ff3a)
+* write-all might work? | [a6ba837](https://github.com/ashketchupppp/base-repo/commit/a6ba8375b09cf0d93c270700b31a607d01b2a8f8)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.4...0.1.5)
+
 ## 0.1.4 (2022-10-22)
 
 * need permissions to get git tag | [634692f](https://github.com/ashketchupppp/base-repo/commit/634692fbd2926ca6381f662951db32ec5cb672a7)
