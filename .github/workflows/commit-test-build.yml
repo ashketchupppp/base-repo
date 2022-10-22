@@ -1,0 +1,21 @@
+name: Commit Build and Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build_and_test:
+    defaults:
+      run:
+        shell: bash
+        working-directory: dashboard
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
