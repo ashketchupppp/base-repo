@@ -19,5 +19,5 @@ jobs:
     - name: Docker build
       run: |
         git fetch --tags
-        set TAG=$(git describe --tags --abbrev=0)
+        TAG=$(git describe --tags --abbrev=0)
         docker build . --tag baserepo:$TAG
