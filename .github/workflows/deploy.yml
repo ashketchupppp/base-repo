@@ -18,5 +18,6 @@ jobs:
     - uses: undergroundwires/bump-everywhere@master
     - name: Docker build
       run: |
+        git fetch --tags
         set TAG=$(git describe --tags --abbrev=0)
         docker build . --tag baserepo:$TAG
