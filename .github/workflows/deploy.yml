@@ -9,7 +9,6 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: dashboard
     runs-on: ubuntu-latest
 
     steps:
