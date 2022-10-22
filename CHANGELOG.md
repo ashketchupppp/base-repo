@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 (2022-10-22)
+
+* dont go into dashboard work dir | [5b6e075](https://github.com/ashketchupppp/base-repo/commit/5b6e075db613ff5f913e7ea4fef3064826a3092b)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.1...0.1.2)
+
 ## 0.1.1 (2022-10-22)
 
 * do docker build and tag with git tag | [9d204f4](https://github.com/ashketchupppp/base-repo/commit/9d204f4fa60ea7065e947d2805c35ea03d6454ea)
