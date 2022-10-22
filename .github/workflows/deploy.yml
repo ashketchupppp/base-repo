@@ -1,0 +1,22 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  actions: read|write
+
+jobs:
+  build_and_test:
+    defaults:
+      run:
+        shell: bash
+        working-directory: dashboard
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: undergroundwires/bump-everywhere@master
+    - name: Build the Docker image
+        run: docker build .
