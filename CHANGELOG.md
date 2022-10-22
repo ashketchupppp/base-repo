@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.6 (2022-10-22)
+
+* tf man | [84f2ae0](https://github.com/ashketchupppp/base-repo/commit/84f2ae0c1c3d7b68c0ddc2ff500effa5c7a12d29)
+* need write | [156bf1f](https://github.com/ashketchupppp/base-repo/commit/156bf1ff7ecb81a3c4b01a1fa84a4620962d7f91)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.5...0.1.6)
+
 ## 0.1.5 (2022-10-22)
 
 * just gimme all the permissions | [0b3896d](https://github.com/ashketchupppp/base-repo/commit/0b3896d6e1001e3223cfa9cd88f7a663bd23ff3a)
