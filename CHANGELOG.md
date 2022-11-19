@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.12 (2022-11-19)
+
+* build scripts need executable permission | [98c8ff4](https://github.com/ashketchupppp/base-repo/commit/98c8ff4858efdd963de08bfefdd82c53c56b653d)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.11...0.1.12)
+
 ## 0.1.11 (2022-11-19)
 
 [compare](https://github.com/ashketchupppp/base-repo/compare/0.1.10...0.1.11)
