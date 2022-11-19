@@ -1,4 +1,5 @@
-TAG=$1
+IMAGE_NAME=$1
+TAG=$2
 
-docker build . --tag baserepo:$TAG
-docker build . --tag baserepo:latest
+docker build . --tag $IMAGE_NAME:$TAG
+docker build . --tag $IMAGE_NAME:latest
