@@ -16,13 +16,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 16
-    - uses: undergroundwires/bump-everywhere@master
     - uses: actions-hub/kubectl@master
       env:
         KUBE_CONFIG: ${{ secrets.KUBECONFIG }}
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: Increment Version Number
+      run: |
+        $($(cat VERSION) + 1 | bc) > VERSION
 
     - name: Setup
       run: |
@@ -38,8 +42,7 @@ jobs:
 
     - name: Docker builds
       run: |
-        git fetch --tags
-        TAG=$(git describe --tags --abbrev=0)
+        TAG=$($(cat VERSION) + 1 | bc)
         ./scripts/docker-build.sh $IMAGE_NAME $TAG
 
     - name: Login to DockerHub
@@ -50,12 +53,18 @@ jobs:
 
     - name: Docker push
       run: |
-        git fetch --tags
-        TAG=$(git describe --tags --abbrev=0)
+        TAG=$($(cat VERSION) + 1 | bc)
         docker push $IMAGE_NAME:$TAG
         docker push $IMAGE_NAME:latest
 
     - name: Deploy
       uses: actions-hub/kubectl@master
-      with:
-        args: kubectl apply -f deployment.yml
+      run: |
+        kubectl apply -f deployment.yml
+
+    - name: Commit new version to GitHub
+      run: |
+        git checkout main
+        git add .
+        git commit -m "Upgrade to v$(cat VERSION)"
+        git push
