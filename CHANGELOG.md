@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.13 (2022-11-19)
+
+* docker-build.sh needs image name | [b2bc389](https://github.com/ashketchupppp/base-repo/commit/b2bc389b40e5ad815c1be7d381b78af40b2d29be)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.12...0.1.13)
+
 ## 0.1.12 (2022-11-19)
 
 * build scripts need executable permission | [98c8ff4](https://github.com/ashketchupppp/base-repo/commit/98c8ff4858efdd963de08bfefdd82c53c56b653d)
