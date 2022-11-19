@@ -57,7 +57,6 @@ jobs:
         docker push $IMAGE_NAME:latest
 
     - name: Deploy
-      uses: actions-hub/kubectl@master
       run: |
         kubectl apply -f deployment.yml
 
