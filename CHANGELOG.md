@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.8 (2022-10-22)
+
+* remove the set | [b5f15f9](https://github.com/ashketchupppp/base-repo/commit/b5f15f954e06e93b436502513ba94824b063e582)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.7...0.1.8)
+
 ## 0.1.7 (2022-10-22)
 
 * try fetching the tags first? | [3f590f5](https://github.com/ashketchupppp/base-repo/commit/3f590f508dcbce497ed646ed42980afe8ca0671c)
