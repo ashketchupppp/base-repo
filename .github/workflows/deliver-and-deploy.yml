@@ -59,8 +59,9 @@ jobs:
         docker push $IMAGE_NAME:latest
 
     - name: Deploy
-      run: |
-        kubectl apply -f deployment.yml
+      uses: actions-hub/kubectl@master
+      with:
+        args: apply -f deployment.yml
 
     - name: Commit new version to GitHub
       run: |
