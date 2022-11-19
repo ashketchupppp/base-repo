@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.11 (2022-11-19)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.10...0.1.11)
+
+## 0.1.10 (2022-11-19)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.9...0.1.10)
+
+## 0.1.9 (2022-11-19)
+
+* dont need that | [5a23c5c](https://github.com/ashketchupppp/base-repo/commit/5a23c5cb85e395e000fdd57147e5d1784d249c5c)
+* lets go? | [1dff70e](https://github.com/ashketchupppp/base-repo/commit/1dff70ec3b271bc8e3706545b5c3d1e7fc0a5e5c)
+* maybe that | [820768a](https://github.com/ashketchupppp/base-repo/commit/820768a7d25ba2824a14d500be25834dc96e0860)
+* whoops | [dd3d17f](https://github.com/ashketchupppp/base-repo/commit/dd3d17f81a3be1dd3a140eb4d65f22b21d213855)
+* only dash on first | [1563fce](https://github.com/ashketchupppp/base-repo/commit/1563fce0bc3e0d037f650634c33af2e38a4a41bb)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.8...0.1.9)
+
 ## 0.1.8 (2022-10-22)
 
 * remove the set | [b5f15f9](https://github.com/ashketchupppp/base-repo/commit/b5f15f954e06e93b436502513ba94824b063e582)
