@@ -31,7 +31,9 @@ jobs:
 
     - name: Increment Version Number
       run: |
+        OLD_VERSION=$(cat VERSION)
         ./scripts/increment-version.sh
+        echo Upgrade from v$OLD_VERSION to v$(cat VERSION)
 
     - name: Setup
       run: |
