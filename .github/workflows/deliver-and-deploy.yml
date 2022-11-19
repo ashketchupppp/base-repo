@@ -22,6 +22,9 @@ jobs:
       with:
         node-version: 16
     - uses: undergroundwires/bump-everywhere@master
+    - uses: actions-hub/kubectl@master
+      env:
+        KUBE_CONFIG: ${{ secrets.KUBECONFIG }}
 
     - name: Setup
       run: |
@@ -53,11 +56,6 @@ jobs:
         TAG=$(git describe --tags --abbrev=0)
         docker push $IMAGE_NAME:$TAG
         docker push $IMAGE_NAME:latest
-
-    - name: Initialise kubectl
-    - uses: actions-hub/kubectl@master
-      env:
-        KUBE_CONFIG: ${{ secrets.KUBECONFIG }}
 
     - name: Deploy
     - uses: actions-hub/kubectl@master
