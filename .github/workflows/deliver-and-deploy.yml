@@ -19,6 +19,11 @@ jobs:
     - uses: actions-hub/kubectl@master
       env:
         KUBE_CONFIG: ${{ secrets.KUBECONFIG }}
+    - name: Login to DockerHub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - uses: actions/setup-node@v3
       with:
@@ -44,12 +49,6 @@ jobs:
       run: |
         TAG=$($(cat VERSION) + 1 | bc)
         ./scripts/docker-build.sh $IMAGE_NAME $TAG
-
-    - name: Login to DockerHub
-      uses: docker/login-action@v2
-      with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Docker push
       run: |
