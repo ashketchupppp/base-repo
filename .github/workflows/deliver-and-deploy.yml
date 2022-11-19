@@ -31,7 +31,7 @@ jobs:
 
     - name: Increment Version Number
       run: |
-        $($(cat VERSION) + 1 | bc) > VERSION
+        ./scripts/increment-version.sh
 
     - name: Setup
       run: |
