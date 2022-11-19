@@ -47,12 +47,12 @@ jobs:
 
     - name: Docker builds
       run: |
-        TAG=$($(cat VERSION) + 1 | bc)
+        TAG=$(cat VERSION)
         ./scripts/docker-build.sh $IMAGE_NAME $TAG
 
     - name: Docker push
       run: |
-        TAG=$($(cat VERSION) + 1 | bc)
+        TAG=$(cat VERSION)
         docker push $IMAGE_NAME:$TAG
         docker push $IMAGE_NAME:latest
 
