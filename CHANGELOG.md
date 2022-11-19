@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.11 (2022-11-19)
+
+[compare](https://github.com/ashketchupppp/base-repo/compare/0.1.10...0.1.11)
+
 ## 0.1.10 (2022-11-19)
 
 [compare](https://github.com/ashketchupppp/base-repo/compare/0.1.9...0.1.10)
