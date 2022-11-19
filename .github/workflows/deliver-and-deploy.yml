@@ -1,0 +1,65 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions: write-all
+
+jobs:
+  build_and_test:
+    defaults:
+      run:
+        shell: bash
+    runs-on: ubuntu-latest
+
+    env:
+      IMAGE_NAME: razmusanderson/baserepo
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - uses: undergroundwires/bump-everywhere@master
+
+    - name: Setup
+      run: |
+        ./scripts/setup.sh
+
+    - name: Build
+      run: |
+        ./scripts/build.sh
+
+    - name: Test
+      run: |
+        ./scripts/test.sh
+
+    - name: Docker builds
+      run: |
+        git fetch --tags
+        TAG=$(git describe --tags --abbrev=0)
+        ./scripts/docker-build.sh $TAG
+
+    - name: Login to DockerHub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Docker push
+      run: |
+        git fetch --tags
+        TAG=$(git describe --tags --abbrev=0)
+        docker push $IMAGE_NAME:$TAG
+        docker push $IMAGE_NAME:latest
+
+    - name: Initialise kubectl
+    - uses: actions-hub/kubectl@master
+      env:
+        KUBE_CONFIG: ${{ secrets.KUBECONFIG }}
+
+    - name: Deploy
+    - uses: actions-hub/kubectl@master
+      with:
+        args: kubectl apply -f deployment.yml

@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: baserepo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: baserepo
+  template:
+    metadata:
+      labels:
+        name: baserepo
+    spec:
+      imagePullSecrets:
+        - name: secrets
+      containers:
+        - name: baserepo
+          image: razmusanderson/baserepo:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9000
+          envFrom:
+          - secretRef:
+              name: secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: baserepo-service
+spec:
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 9000
+  selector:
+    name: baserepo
